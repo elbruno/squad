@@ -21,16 +21,22 @@ It's not a chatbot wearing hats. Each team member runs in its own context, reads
 
 ```mermaid
 graph LR
-    U["🧑‍💻 You"] -->|"Kai, build the login page"| C["Squad Coordinator"]
-    C -->|routes| K["⚛️ Kai — Frontend Dev"]
+    U["🧑‍💻 You"] -->|"Team, build the login page"| C["GitHub Copilot"]
+    C -->|routes| K["⚛️ Kai — Frontend"]
+    C -->|routes| R["🔧 River — Backend"]
+    C -->|routes| A["🏗️ Alex — Lead"]
+    C -->|routes| T["🧪 Casey — Tester"]
     C -->|silent| S["📋 Scribe"]
-    K -->|writes learnings| HK["kai/history.md"]
-    K -->|team decisions| D["decisions.md"]
-    S -->|propagates| HR["river/history.md"]
+    K -->|writes| HK["kai/history.md"]
+    R -->|writes| HR["river/history.md"]
+    K & R -->|decisions| D["decisions.md"]
     S -->|logs| L["log/"]
 
     style C fill:#6366f1,color:#fff
     style K fill:#3b82f6,color:#fff
+    style R fill:#3b82f6,color:#fff
+    style A fill:#3b82f6,color:#fff
+    style T fill:#3b82f6,color:#fff
     style S fill:#6b7280,color:#fff
 ```
 
